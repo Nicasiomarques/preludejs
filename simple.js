@@ -9,3 +9,4 @@ const propEq = key => value => obj => obj[key] === value;
 const mergeRight = (obj1, obj2) => ({ ...obj1, ...obj2 });
 const pathOr = (defaultValue, path) => obj => reduce((acc, key) => acc && acc[key], obj)(path) || defaultValue;
 const len = prop('length');
+const filter = (fn) => ([x, ...xs]) => isEmpty(xs) ? fn(x) ? [x] : [] : fn(x) ? [x, ...filter(fn)(xs)] : filter(fn)(xs);
