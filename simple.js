@@ -19,3 +19,4 @@ const reduceRight = (fn, acc) => ([x, ...xs]) => isEmpty(xs) ? fn(x, acc) : redu
 const pick = reduce((acc, key) => ({ ...acc, [key]: obj[key] }), {});
 const append = x => xs => [...xs, x];
 const prepend = x => xs => [x, ...xs];
+const head = ([x]) => x;
