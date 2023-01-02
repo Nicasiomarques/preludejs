@@ -41,3 +41,10 @@ const sortBy = f => sort(ascend(f))
 const T = always(true);
 const F = always(false);
 const type = x => Object.prototype.toString.call(x).slice(8, -1)
+const curry = (fn, ...args) => {
+  const arity = fn.length;
+  return (...rest) => {
+    const allArgs = [...args, ...rest];
+    return allArgs.length >= arity ? fn(...allArgs) : curry(fn, ...allArgs);
+  };
+};
