@@ -38,3 +38,4 @@ const always = x => () => x;
 const ascend = f => (a, b) => f(a) > f(b) ? 1 : -1;
 const descend = f => (a, b) => f(a) > f(b) ? -1 : 1;
 const sortBy = f => sort(ascend(f))
+const T = always(true);
