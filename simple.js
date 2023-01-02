@@ -17,3 +17,4 @@ const any = (fn) => ([x, ...xs]) => isEmpty(xs) ? fn(x) : fn(x) || any(fn)(xs);
 const reduce = (fn, acc) => ([x, ...xs]) => isEmpty(xs) ? fn(acc, x) : reduce(fn, fn(acc, x))(xs);
 const reduceRight = (fn, acc) => ([x, ...xs]) => isEmpty(xs) ? fn(x, acc) : reduceRight(fn, fn(x, acc))(xs);
 const pick = reduce((acc, key) => ({ ...acc, [key]: obj[key] }), {});
+const append = x => xs => [...xs, x];
