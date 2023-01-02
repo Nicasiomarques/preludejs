@@ -28,3 +28,4 @@ const both = (f, g) => x => f(x) && g(x);
 const either = (f, g) => x => f(x) || g(x);
 const isEmpty = ([x]) => !x;
 const oneOf = ([x, ...xs]) => isEmpty(xs) ? equals(x) : either(equals(x), oneOf(xs));
+const isNil = oneOf([null, undefined]);
