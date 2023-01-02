@@ -18,5 +18,6 @@
     "lodash"
   ],
   "author": "Nicasio Silva",
-  "license": "ISC"
+  "license": "ISC",
+  "type": "module"
 }
