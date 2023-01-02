@@ -21,3 +21,4 @@ const append = x => xs => [...xs, x];
 const prepend = x => xs => [x, ...xs];
 const head = ([x]) => x;
 const tail = ([, ...xs]) => xs;
+const last = xs => xs[len(xs) - 1];
