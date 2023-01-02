@@ -33,3 +33,4 @@ const when = (pred, fn) => (...args) => pred(...args) ? fn(...args) : args;
 const cond = ([[pred, fn], ...xs]) => obj => pred(obj) ? fn(obj) : cond(xs)(obj);
 const pipe = (...fns) => x => reduce((acc, fn) => fn(acc), x)(fns);
 const compose = (...fns) => x => reduceRight((acc, fn) => fn(acc), x)(fns);
+const partialize = (fn, ...args) => fn.bind(null, ...args);
