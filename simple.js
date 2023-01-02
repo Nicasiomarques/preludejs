@@ -13,3 +13,4 @@ const filter = (fn) => ([x, ...xs]) => isEmpty(xs) ? fn(x) ? [x] : [] : fn(x) ? 
 const map = f => ([x, ...xs]) => isEmpty(xs) ? [f(x)] : [f(x), ...map(f)(xs)];
 const pluck = (key) => map(prop(key));
 const every = (fn) => ([x, ...xs]) => isEmpty(xs) ? fn(x) : fn(x) && every(fn)(xs);
+const any = (fn) => ([x, ...xs]) => isEmpty(xs) ? fn(x) : fn(x) || any(fn)(xs);
