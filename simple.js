@@ -20,3 +20,4 @@ const pick = reduce((acc, key) => ({ ...acc, [key]: obj[key] }), {});
 const append = x => xs => [...xs, x];
 const prepend = x => xs => [x, ...xs];
 const head = ([x]) => x;
+const tail = ([, ...xs]) => xs;
