@@ -35,3 +35,4 @@ const pipe = (...fns) => x => reduce((acc, fn) => fn(acc), x)(fns);
 const compose = (...fns) => x => reduceRight((acc, fn) => fn(acc), x)(fns);
 const partialize = (fn, ...args) => fn.bind(null, ...args);
 const always = x => () => x;
+const ascend = f => (a, b) => f(a) > f(b) ? 1 : -1;
