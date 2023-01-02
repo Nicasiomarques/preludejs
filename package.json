@@ -1,0 +1,22 @@
+{
+  "name": "prelude-js",
+  "version": "1.0.0",
+  "description": "Functional operators library inspired by Haskell's standard library whose objective is to bring operators from functional programming concepts and increase the programmer's productivity opening the horizons to a new paradigm in the arcane world",
+  "main": "index.js",
+
+  "keywords": [
+    "functional",
+    "functional programming",
+    "operators",
+    "haskell",
+    "prelude",
+    "javascript",
+    "js",
+    "node",
+    "nodejs",
+    "ramda",
+    "lodash"
+  ],
+  "author": "Nicasio Silva",
+  "license": "ISC"
+}
