@@ -25,3 +25,4 @@ const last = xs => xs[len(xs) - 1];
 const sort = f => xs => xs.sort(f);
 const ifElse = (pred, f1, f2) => (...args) => pred(...args) ? f1(...args) : f2(...args);
 const both = (f, g) => x => f(x) && g(x);
+const either = (f, g) => x => f(x) || g(x);
