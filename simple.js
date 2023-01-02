@@ -31,3 +31,4 @@ const oneOf = ([x, ...xs]) => isEmpty(xs) ? equals(x) : either(equals(x), oneOf(
 const isNil = oneOf([null, undefined]);
 const when = (pred, fn) => (...args) => pred(...args) ? fn(...args) : args;
 const cond = ([[pred, fn], ...xs]) => obj => pred(obj) ? fn(obj) : cond(xs)(obj);
+const pipe = (...fns) => x => reduce((acc, fn) => fn(acc), x)(fns);
