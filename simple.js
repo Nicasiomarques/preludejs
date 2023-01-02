@@ -11,3 +11,4 @@ const pathOr = (defaultValue, path) => obj => reduce((acc, key) => acc && acc[ke
 const len = prop('length');
 const filter = (fn) => ([x, ...xs]) => isEmpty(xs) ? fn(x) ? [x] : [] : fn(x) ? [x, ...filter(fn)(xs)] : filter(fn)(xs);
 const map = f => ([x, ...xs]) => isEmpty(xs) ? [f(x)] : [f(x), ...map(f)(xs)];
+const pluck = (key) => map(prop(key));
